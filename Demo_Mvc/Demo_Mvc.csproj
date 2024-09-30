@@ -1,0 +1,29 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <GenerateDocumentationFile>True</GenerateDocumentationFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="BuildBundlerMinifier" Version="3.2.449" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <EditorConfigFiles Remove="E:\GitHubRepo\Demo_Mvc\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="E:\GitHubRepo\Demo_Mvc\.editorconfig" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Demo_Mvc.Common\Demo_Mvc.Common.csproj" />
+    <ProjectReference Include="..\Demo_Mvc.Service\Demo_Mvc.Service.csproj" />
+  </ItemGroup>
+
+  
+
+</Project>

@@ -1,0 +1,31 @@
+﻿@{
+    var layoutInfo = ViewData["LayoutInfo"] as LayoutModel ?? new LayoutModel();
+}
+
+<!DOCTYPE html>
+<html lang="@(layoutInfo.Lang ?? "en")">
+<head>
+    <meta charset="UTF-8" />
+    <title>@ViewBag.Title</title>
+    <link rel="icon" href="~/favicon.ico" type="image/x-icon" />
+    <link href="~/css/base.min.css?v=1.0.9" rel="stylesheet" type="text/css" />
+    <link href="~/css/swiper-bundle.min.css?v=1.0.0" rel="stylesheet" type="text/css" />
+    <meta name="Lang" action="@layoutInfo.Lang" />
+</head>
+<body>
+    <nav class="nav-base">
+        <div class="nav-box" id="navBar">
+            <a href="Home" class="a-noLink-style nav-title index-logo-icon logo-icon"></a>
+        </div>
+    </nav>
+    <main>
+        @RenderBody()
+    </main>
+    <footer class="footer-box">
+        <div>
+            <div class="segment-line"></div>
+        </div>
+    </footer>
+    <div id="preload-container" class="hidden-load"></div>
+</body>
+</html>
